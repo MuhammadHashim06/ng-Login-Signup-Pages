@@ -1,0 +1,22 @@
+<div class="login-container" *ngIf="page=='login'">
+    <form action="" (submit)="onlogin()" [formGroup]="loginUser">
+        <h1>Login</h1>
+        <input type="email" name="email" formControlName="email" placeholder="Email" required>
+        <span></span>
+        <input type="password" name="password" formControlName="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+        <p style="color: #007bff; cursor: pointer;" (click)="changeform()">Don't have account</p>
+    </form>
+    <img src="Images/undraw_Login.png" alt="login Mockup">
+</div>
+
+<div class="signup-container" *ngIf="page=='signup'">
+    <form action="" (submit)="onsignup()"  [formGroup]="signupUser">
+        <h1>Signup</h1>
+        <input type="email" name="email" placeholder="Email" ngForm formControlName="email" required>
+        <input type="password" name="password" placeholder="Password" ngModel formControlName="password" required>
+        <input type="submit" value="Signup">
+        <p style="color: #007bff; cursor: pointer;" (click)="changeform()">Have account?</p>
+    </form>
+    <img src="Images/undraw_Signup.png" alt="login Mockup">
+</div>
